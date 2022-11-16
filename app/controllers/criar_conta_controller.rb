@@ -14,12 +14,26 @@ class CriarContaController < ApplicationController
       endereco: "#{data[:endereco]} - #{data[:cep]}, #{data[:cidade]}, #{data[:estado]}")
 
 
+    agencia = Agencias.find_by(num_agencia: get_agencia(data[:cidade]))
     if @cliete.save
-      redirect_to criar_conta_done_path
+      @conta = Contas.new(numero: rand(10000..50000), saldo: 0.0, data_abertura: DateTime.current.to_date, clientes_id: @cliete.id, agencias_id: agencia.id)
+      if @conta.save
+        redirect_to criar_conta_done_path
+      end
+
     end
   end
 
   def done
 
+  end
+
+  private
+  def get_agencia(cidade)
+    num_agencias = {"Goiania": 1234,
+     "Aparecida de Goiania": 5678,
+     "Brasilia": 9876
+    }
+    num_agencias[:"#{cidade}"]
   end
 end

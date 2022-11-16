@@ -1,6 +1,6 @@
 require "test_helper"
 
-class AgenciumTest < ActiveSupport::TestCase
+class AgenciasTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
