@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'pagina_inicial/index'
   get 'criar_conta/index'
   post 'criar_conta/new'
-  get 'criar_conta/done'
+  get 'criar_conta/:id', to: 'criar_conta#show'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
