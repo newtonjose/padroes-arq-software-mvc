@@ -1,0 +1,69 @@
+<!-- inside app/views/home/index.html.erb -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Heroes · Bootstrap v5.0</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+      .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+      }
+
+      @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+          }
+      }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="heroes.css" rel="stylesheet">
+</head>
+
+<main>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Suporte</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+      </ul>
+    </header>
+  </div>
+  <div class="container my-5">
+    <img class="d-block mx-auto mb-4" src=<%= image_path("bank-logo.png") %> alt="#" width="400" height="200">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">PAS Simple Bank</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod bibendum erat, eget lacinia
+          leo scelerisque ac.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <div>
+            <%= link_to 'Abrir uma conta', criar_conta_index_path, :class => "btn btn-primary btn-lg px-4 me-md-2 fw-bold"%>
+          </div>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Entrar na sua conta</button>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3" src=<%= image_path("bank-builder.png") %> alt="" width="720">
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<!--<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>-->
+
